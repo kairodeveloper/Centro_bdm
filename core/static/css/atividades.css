@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Estilizacao do menu superior */
+#area_menu_desktop{
+    height: 250px;
+    background-color: #FFF;
+}
+
+#area_menu_mobile{
+    height: 400px;
+    background-color: #FFF;
+}
+
+#logo_site_desktop{
+    margin-top: 15px;
+    height: 220px;
+}
+
+#logo_site_mobile{
+    margin-top: 25px;
+    height: 350px;
+}
+
+#logo_site_mobile_menor{
+    margin-top: 100px;
+    height: 200px;
+}
+
+.btns_menu{
+    margin-top: 160px;
+}
+
+
+#btn_menu{
+    height: 100px;
+    margin-top: 150px;
+}
+
+#btn_menu_menor{
+    height: 50px;
+    margin-top: 100px;
+}
+
+/* Menu mobile */
+
+.opcoes_menu_mobile{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+}
+
+.opcoes_menu_mobile p{
+    font-size: 30px;
+}
+
+/*Localizacao de navegacao*/
+.nav_localizacao{
+    background-color: #;
+}
+
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+
+.fadeIn {
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/*area das atividades*/
+.area_das_atividades{
+    height: 290px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.area_da_esquerda{
+    height: 280px;
+    background-color: #0277bd;
+}
+
+.card-de-atividades{
+    margin-bottom: 50px;
+}
+
+.atividades{}
+/*footer*/
+#area_footer{
+    height: 219px;
+    padding: 0px;
+}
+
+#textos_footer{
+    text-align: justify; font-family: Montserrat,Arial, Helvetica, sans-serif; font-size: 12px;
+}
+
+.titulo_footer_mobile{
+    font-size: 28px;
+}
+
+.descricao_casa_footer{
+    font-size: 24px;
+}
+
+.textos_footer_mobile{
+    font-size: 24px;
+}
+
+#logo_insta{
+    height: 75px;
+    margin-top: 0px;
+}
+
+#logo_fb{
+    height: 75px;
+}
+
+/* Usado para verificar o alinhamento de todos */
+
+.alinhamento{
+    border: 1px solid #000;
+}
+

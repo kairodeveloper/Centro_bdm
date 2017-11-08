@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+<head>
+    <!-- Importacoes -->
+    {% include "importacoes.html" %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Bem Vindo | Centro Espírita Bezerra de Meneses</title>
+
+</head>
+
+<body>
+
+    <!-- Menu superior -->
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">QUEM SOMOS</a></li>
+      <li><a href="#!">GALERIA</a></li>
+      <li><a href="#!">CONTATO</a></li>
+    </ul>
+
+    <nav id="area_menu_desktop" class="hide-on-med-and-down">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo"><img id="logo_site_desktop" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <ul class="right hide-on-med-and-down btns_menu">
+                <li class="active"><a href="" class=" teal-text darken-4">INÍCIO</p></a></li>
+                <li><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
+                <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
+                <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+
+        </div>
+
+
+    </nav>
+
+    <nav id="area_menu_mobile" class="hide-on-large-only">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo hide-on-small-only"><img id="logo_site_mobile" src="{% static 'imagens/logo_centro.png' %}"></a>
+            <a href="" class="brand-logo hide-on-med-and-up"><img id="logo_site_mobile_menor" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-small-only"><img id="btn_menu" src="{% static 'imagens/menu.png' %}"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><img id="btn_menu_menor" src="{% static 'imagens/menu.png' %}"></a>
+
+            <ul class="side-nav" id="mobile-demo">
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href=""><p>INÍCIO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>ATIVIDADES</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>SOBRE NÓS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>CONTATO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>GALERIA</p></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <!-- Fim do menu -->
+
+    <!-- Slide pos menu-->
+    <div class="slider">
+        <ul class="slides fadeIn">
+            <li>
+                <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                <div class="container caption center-align">
+                    <h1 class="hide-on-large-only">This is our big Tagline!</h1>
+                    <h3 class="hide-on-med-and-down">This is our big Tagline!</h3>
+                    <h3 class="hide-on-large-only light grey-text text-lighten-3">Here's our small slogan.</h3>
+                    <h5 class="hide-on-med-and-down light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <button class="hide-on-large-only btn_slide_mobile">LEIA MAIS</button>
+                    <button class="hide-on-med-and-down btn_slide_desktop">LEIA MAIS</button>
+                </div>
+            </li>
+            <li>
+                <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                <div class="container caption left-align">
+                    <h1 class="hide-on-large-only">This is our big Tagline!</h1>
+                    <h3 class="hide-on-med-and-down">This is our big Tagline!</h3>
+                    <h3 class="hide-on-large-only light grey-text text-lighten-3">Here's our small slogan.</h3>
+                    <h5 class="hide-on-med-and-down light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <button class="hide-on-large-only btn_slide_mobile">LEIA MAIS</button>
+                    <button class="hide-on-med-and-down btn_slide_desktop">LEIA MAIS</button>
+                </div>
+            </li>
+            <li>
+                <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                <div class="container caption right-align">
+                    <h1 class="hide-on-large-only">This is our big Tagline!</h1>
+                    <h3 class="hide-on-med-and-down">This is our big Tagline!</h3>
+                    <h3 class="hide-on-large-only light grey-text text-lighten-3">Here's our small slogan.</h3>
+                    <h5 class="hide-on-med-and-down light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <button class="hide-on-large-only btn_slide_mobile">LEIA MAIS</button>
+                    <button class="hide-on-med-and-down btn_slide_desktop">LEIA MAIS</button>
+                </div>
+            </li>
+            <li>
+                <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                <div class="container caption center-align">
+                        <h1 class="hide-on-large-only">This is our big Tagline!</h1>
+                    <h3 class="hide-on-med-and-down">This is our big Tagline!</h3>
+                    <h3 class="hide-on-large-only light grey-text text-lighten-3">Here's our small slogan.</h3>
+                    <h5 class="hide-on-med-and-down light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <button class="hide-on-large-only btn_slide_mobile">LEIA MAIS</button>
+                    <button class="hide-on-med-and-down btn_slide_desktop">LEIA MAIS</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Fim do slide -->
+    <!-- Inicio das noticias -->
+
+    <div class="row" id="area_titulo_last_news">
+
+        <div class="col xl2"></div>
+
+        <div class="col xl8 m12" id="container_titulo">
+            <h1 class="hide-on-large-only text-align center titulos">ÚLTIMAS NOTÍCIAS</h1>
+            <h4 class="hide-on-med-and-down text-align center titulos">ÚLTIMAS NOTÍCIAS</h4>
+
+        </div>
+
+        <div class="col xl2"></div>
+
+    </div>
+
+    <div class="row" id="area_last_news">
+
+        <div class="col xl2"></div>
+
+        <div class="col xl8">
+
+            <div class="row hide-on-large-only ">
+                <div class="col s12 m12">
+                    <div class="card-mobile card large hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Salve sua vida</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Leia Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 m12">
+                    <div class="card-mobile card large hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Nature of my game</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m12">
+                    <div class="card-mobile card large hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Behind blue eyes</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hide-on-med-and-down ">
+                <div class="col xl4 l4 s12 m12">
+                    <div class="card medium hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Salve sua vida</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Leia Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col xl4 l4 s12 m12">
+                    <div class="card medium hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Nature of my game</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col xl4 l4 s12 m12">
+                    <div class="card medium hoverable">
+                        <div class="card-image">
+                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <span class="card-title titulo_noticia">Behind blue eyes</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col xl2"></div>
+
+    </div>
+    <!-- Fim das noticias -->
+
+    <!-- Eventos do mes -->
+
+
+     <div class="row" id="area_eventos">
+        <div class=" col xl4 m2 s1"></div>
+        <div class=" col xl4 m8 s10">
+
+            <h1 class="hide-on-large-only text-align center titulos">EVENTOS DO MÊS</h1>
+            <h4 class="hide-on-med-and-down text-align center titulos">EVENTOS DO MÊS</h4>
+
+        </div>
+        <div class=" col xl4 m2 s1"></div>
+    </div>
+    <div class="row ">
+        <div class="col xl2"></div>
+        <div class="col xl8 m12 s12 ">
+
+            <div class="row no-padding hide-on-med-and-down">
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class=" collapsible-header hoverable">
+                            <i class="material-icons">event</i>
+                            I PALESTRA SOBRE ESPIRITUALIDADE
+                            <span class="badge">8 de Outubro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+
+                            <br>
+
+                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
+
+                            <br>
+
+                            <p><b>HORÁRIO:</b> 19:00</p>
+
+                            <br>
+
+                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
+
+                            <br>
+
+                            <p><b>ORGANIZADOR:</b> Juliana</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header  hoverable">
+                            <i class="material-icons">event</i>
+                            ENCONTRO DE JOVENS ESPÍRITAS
+                            <span class="badge">8 de Outubro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+
+                            <br>
+
+                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
+
+                            <br>
+
+                            <p><b>HORÁRIO:</b> 19:00</p>
+
+                            <br>
+
+                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
+
+                            <br>
+
+                            <p><b>ORGANIZADOR:</b> Juliana</p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row no-padding hide-on-large-only eventos-mobile">
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header hoverable">
+                            <i class="material-icons">event</i>
+                            I PALESTRA SOBRE ESPIRITUALIDADE
+                            <span class="badge">8 de Outubro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+
+                            <br>
+
+                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
+
+                            <br>
+
+                            <p><b>HORÁRIO:</b> 19:00</p>
+
+                            <br>
+
+                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
+
+                            <br>
+
+                            <p><b>ORGANIZADOR:</b> Juliana</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header  hoverable">
+                            <i class="material-icons">event</i>
+                            ENCONTRO DE JOVENS ESPÍRITAS
+                            <span class="badge">8 de Outubro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+
+                            <br>
+
+                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
+
+                            <br>
+
+                            <p><b>HORÁRIO:</b> 19:00</p>
+
+                            <br>
+
+                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
+
+                            <br>
+
+                            <p><b>ORGANIZADOR:</b> Juliana</p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <div class="col xl2"></div>
+    </div>
+
+    <!-- Fim dos eventos do mes -->
+
+
+    <!-- Mapa de localizacao -->
+
+    <div class="row" id="area_titulo_localizacao">
+        <div class=" col xl4 m2 s1"></div>
+        <div class=" col xl4 m8 s10">
+
+            <h1 class="hide-on-large-only text-align center titulos">VENHA ATÉ NÓS</h1>
+            <h4 class="hide-on-med-and-down text-align center titulos">VENHA ATÉ NÓS</h4>
+
+        </div>
+        <div class=" col xl4 m2 s1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col xl2"></div>
+        <div class="col xl8 m12 s12" id="map">
+
+            <div class="row">
+
+                <div class="col xl12 m12 s12">
+
+                    <p class="hide-on-large-only" id="razao_social_centro_mobile">Temos o objetivo de transmitir o conhecimento doutrinário, filosófico da ciência e religião para a sociedade através do estudo e prática da doutrina espírita para quem busca esclarecimento para os problemas espirituais , morais e materiais.</p>
+                    <p class="hide-on-med-and-down" id="razao_social_centro">Temos o objetivo de transmitir o conhecimento doutrinário, filosófico da ciência e religião para a sociedade através do estudo e prática da doutrina espírita para quem busca esclarecimento para os problemas espirituais , morais e materiais.</p>
+
+                </div>
+                <div class="col xl12 m12 s12" id="div_mapa_pd">
+
+                    <iframe id="map_propriamente_dito" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.20570762792!2d-42.82901458462738!3d-5.070380896319866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e384af3115f69%3A0x3c2649469ada5bc6!2sR.+Rui+Barbosa%2C+2715+-+Matadouro%2C+Teresina+-+PI%2C+64004-285!5e0!3m2!1spt-BR!2sbr!4v1507411384101" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col xl2"></div>
+    </div>
+    <!-- Fim do mapa de localizacao -->
+
+    <!-- Rodape -->
+    <footer class="page-footer blue darken-3">
+            <div class="container row">
+
+                <div class="col xl4 l4 m12 s12 no-padding textos_footer">
+
+                    <ul>
+
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+                        <li class="hide-on-med-and-down"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+
+                        <br>
+                        <li>
+                            <p class="hide-on-large-only descricao_casa_footer">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                            <p class="hide-on-med-and-down">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                        </li>
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>Links</b></li>
+                        <li class="hide-on-med-and-down"><b>Links</b></li>
+
+                        <br>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a class="white-text" href="admin">Administração</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="admin">Administração</a></li>
+
+
+                        <li class="textos_footer_mobile hide-on-large-only">Fale conosco</li>
+                        <li class="textos_footer hide-on-med-and-down">Fale conosco</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only">Quem somos</li>
+                        <li class="textos_footer hide-on-med-and-down">Quem somos</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>REDES SOCIAIS</b></li>
+                        <li class="hide-on-med-and-down"><b>REDES SOCIAIS</b></li>
+                    </ul>
+                    <div class="row">
+
+                        <div class="col xl8 no-padding">
+
+                            <img id="logo_fb" src="{% static 'imagens/icons8-Facebook-64.png' %}">
+                            <img id="logo_insta" src="{% static 'imagens/icons8-Instagram-64.png' %}">
+
+                        </div>
+
+                        <div class="col xl4"></div>
+
+                    </div>
+
+                </div>
+
+        </div>
+        <div class="footer-copyright blue darken-4">
+            <div class="container">
+                <a class="grey-text text-lighten-4 center" target="_blank" href="">Copyright © 2017 Centro Espírita Bezerra de Menezes - Todos os direitos reservados</a>
+                <br>
+                <a class="grey-text text-lighten-4 center" target="_blank" href="https://www.facebook.com/kairo.maggot">Feito por Kairo Costa</a>
+            </div>
+        </div>
+    <!-- Fim do rodape -->
+
+
+
+
+    </footer>
+</body>
+</html>
+
+
+
+
+<!-- geladeira
+
+
+-->

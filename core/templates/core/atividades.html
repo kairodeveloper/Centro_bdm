@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+<head>
+    <!-- Importacoes -->
+    {% include "importacoes.html" %}
+    <link rel="stylesheet" href="{% static 'css/atividades.css' %}">
+    <script src="{% static 'js/atividades.js' %}"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Bem Vindo | Centro Espírita Bezerra de Meneses</title>
+
+</head>
+
+<body>
+
+    <!-- Menu superior -->
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">QUEM SOMOS</a></li>
+      <li><a href="#!">GALERIA</a></li>
+      <li><a href="#!">CONTATO</a></li>
+    </ul>
+
+    <nav id="area_menu_desktop" class="hide-on-med-and-down">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo"><img id="logo_site_desktop" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <ul class="right hide-on-med-and-down btns_menu">
+                <li><a href="home" class=" teal-text darken-4">INÍCIO</p></a></li>
+                <li class="active"><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
+                <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
+                <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+
+        </div>
+
+
+    </nav>
+
+    <nav id="area_menu_mobile" class="hide-on-large-only">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo hide-on-small-only"><img id="logo_site_mobile" src="{% static 'imagens/logo_centro.png' %}"></a>
+            <a href="" class="brand-logo hide-on-med-and-up"><img id="logo_site_mobile_menor" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-small-only"><img id="btn_menu" src="{% static 'imagens/menu.png' %}"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><img id="btn_menu_menor" src="{% static 'imagens/menu.png' %}"></a>
+
+            <ul class="side-nav" id="mobile-demo">
+                <li><a class="opcoes_menu_mobile" href=""><p>INÍCIO</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="#"><p>ATIVIDADES</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>SOBRE NÓS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>CONTATO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>GALERIA</p></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Fim do menu -->
+
+    <nav>
+        <div class="nav-wrapper blue darken-3 z-depth-0 nav_localizacao">
+            <div class="col container s12">
+                <a href="#!" class="breadcrumb">Home</a>
+                <a href="#!" class="breadcrumb">Atividades</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Inicio das noticias -->
+
+    <div class="row" id="area_last_news">
+
+        <div class="col xl2"></div>
+
+        <div class="col xl8 no-padding">
+
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>DIVULGAÇÃO DO EVANGELHO</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>EVANGELHO EM LARES NAS VILAS EM TERESINA-PI E EM TIMON-MA (CASA DOS PEQUENINOS E CANTINHO DE LUZ CHICO XAVIER)</td>
+                                <td>1º DOMINGO DE CADA MÊS</td>
+                                <td>07:30 às 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>CARAVANA DO EVANGELHO NO LAR</td>
+                                <td>1º SÁBADO DE CADA MÊS</td>
+                                <td>13:30 às 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>CAFÉ DA MANHÃ COM MORADORES DE RUA E PEDINTES NO CENTRO DE TERESINA</td>
+                                <td>3º DOMINGO DE CADA MÊS</td>
+                                <td>06:00 às 09:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>ENCONTRO COM IDOSOS</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>VISITA AO ABRIGO DE IDOSO VILA DO ANCIÃO</td>
+                                <td>2º DOMINGO DE CADA MÊS</td>
+                                <td>07:40 às 11:00</td>
+                            </tr>
+                            <tr>
+                                <td>VISITA AO ABRIGO DE IDOSOS CASA FREDERICO OZANAN</td>
+                                <td>4º DOMINGO DE CADA MÊS</td>
+                                <td>08:40 às 11:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>ENCONTRO COM ENFERMOS</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>VISITA AO HOSPITAL GETÚLIO VARGAS - HGV</td>
+                                <td>1ª SEGUNDA-FEIRA DE CADA MÊS</td>
+                                <td>19:00 às 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>VISITA AO HOSPITAL PSIQUIÁTRICO AREOLINO DE ABREU</td>
+                                <td>3ª SEGUNDA-FEIRA DE CADA MÊS</td>
+                                <td>18:30 às 21:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>ENCONTRO COM DEPENDENTES QUÍMICOS</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>VISITA AO HOSPITAL DO MOCAMBINHO(REGIÃO NORTE DE TERESINA)</td>
+                                <td>3ª QUARTA-FEIRA DE CADA MÊS</td>
+                                <td>19:15 às 21:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>ENCONTRO COM ENCARCERADOS</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>VISITA A PENITENCIÁRIA MAJOR CÉSAR</td>
+                                <td>TODA TERÇA-FEIRA</td>
+                                <td>13:00 às 16:40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row area_das_atividades no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+
+                    <p>CARIDADE EM AÇÃO</p>
+
+                </div>
+
+                <div class="col xl1"></div>
+
+                <div class="col xl9">
+
+                    <table class="bordered highlight">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>CAMPANHA FRATERNA AUTA DE SOUZA(CAMPANHA DO KILO)</td>
+                                <td>TODOS OS SÁBADOS</td>
+                                <td>17:10 às 18:10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="col xl2"></div>
+
+    </div>
+    <!-- Fim das atividades -->
+
+    <!-- Rodape -->
+    <footer class="page-footer blue darken-3">
+            <div class="container row">
+
+                <div class="col xl4 l4 m12 s12 no-padding textos_footer">
+
+                    <ul>
+
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+                        <li class="hide-on-med-and-down"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+
+                        <br>
+                        <li>
+                            <p class="hide-on-large-only descricao_casa_footer">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                            <p class="hide-on-med-and-down">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                        </li>
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>Links</b></li>
+                        <li class="hide-on-med-and-down"><b>Links</b></li>
+
+                        <br>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a class="white-text" href="admin">Administração</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="admin">Administração</a></li>
+
+
+                        <li class="textos_footer_mobile hide-on-large-only">Fale conosco</li>
+                        <li class="textos_footer hide-on-med-and-down">Fale conosco</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only">Quem somos</li>
+                        <li class="textos_footer hide-on-med-and-down">Quem somos</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>REDES SOCIAIS</b></li>
+                        <li class="hide-on-med-and-down"><b>REDES SOCIAIS</b></li>
+                    </ul>
+                    <div class="row">
+
+                        <div class="col xl8 no-padding">
+
+                            <img id="logo_fb" src="{% static 'imagens/icons8-Facebook-64.png' %}">
+                            <img id="logo_insta" src="{% static 'imagens/icons8-Instagram-64.png' %}">
+
+                        </div>
+
+                        <div class="col xl4"></div>
+
+                    </div>
+
+                </div>
+
+        </div>
+        <div class="footer-copyright blue darken-4">
+            <div class="container">
+                <a class="grey-text text-lighten-4 center" target="_blank" href="">Copyright © 2017 Centro Espírita Bezerra de Menezes - Todos os direitos reservados</a>
+                <br>
+                <a class="grey-text text-lighten-4 center" target="_blank" href="https://www.facebook.com/kairo.maggot">Feito por Kairo Costa</a>
+            </div>
+        </div>
+    <!-- Fim do rodape -->
+
+
+
+
+    </footer>
+</body>
+</html>
+
+
+
+
+<!-- geladeira
+
+
+                <div class="col xl2">DIVULGAÇÃO DO EVANGELHO</div>
+
+                <div class="col xl10">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Dia</th>
+                                <th>Horário</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>EVANGELHO EM LARES NAS VILAS EM TERESINA-PI E EM TIMON-MA (CASA DOS PEQUENINOS E CANTINHO DE LUZ CHICO XAVIER)</td>
+                                <td>1º domingo do mês</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+-->

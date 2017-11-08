@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+<head>
+    <!-- Importacoes -->
+    {% include "importacoes.html" %}
+    <link rel="stylesheet" href="{% static 'css/noticias.css' %}">
+    <script src="{% static 'js/noticias.js' %}"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Notícias | Centro Espírita Bezerra de Meneses</title>
+
+</head>
+
+<body>
+
+    <!-- Menu superior -->
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">QUEM SOMOS</a></li>
+      <li><a href="#!">GALERIA</a></li>
+      <li><a href="#!">CONTATO</a></li>
+    </ul>
+
+    <nav id="area_menu_desktop" class="hide-on-med-and-down">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo"><img id="logo_site_desktop" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <ul class="right hide-on-med-and-down btns_menu">
+                <li><a href="home" class=" teal-text darken-4">INÍCIO</p></a></li>
+                <li><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
+                <li class="active"><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
+                <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+
+        </div>
+
+
+    </nav>
+
+    <nav id="area_menu_mobile" class="hide-on-large-only">
+
+        <div class="nav-wrapper container">
+
+            <a href="" class="brand-logo hide-on-small-only"><img id="logo_site_mobile" src="{% static 'imagens/logo_centro.png' %}"></a>
+            <a href="" class="brand-logo hide-on-med-and-up"><img id="logo_site_mobile_menor" src="{% static 'imagens/logo_centro.png' %}"></a>
+
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-small-only"><img id="btn_menu" src="{% static 'imagens/menu.png' %}"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><img id="btn_menu_menor" src="{% static 'imagens/menu.png' %}"></a>
+
+            <ul class="side-nav" id="mobile-demo">
+                <li><a class="opcoes_menu_mobile black white-text" href="#"><p>FECHAR</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="home"><p>INÍCIO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="atividades"><p>ATIVIDADES</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>SOBRE NÓS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>CONTATO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="#"><p>GALERIA</p></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <!-- Fim do menu -->
+    <!-- Conteudo-->
+
+    <nav>
+        <div class="nav-wrapper blue darken-3 z-depth-0 nav_localizacao">
+            <div class="col container s12 hide-on-med-and-down">
+                <a href="#!" class="breadcrumb">Home</a>
+                <a href="#!" class="breadcrumb">Notícias</a>
+            </div>
+            <div class="col container s12 hide-on-large-only">
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Home</a>
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Notícias</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container row" id="div_noticias">
+
+            <div class="col m12 l8 xl8 no-padding">
+
+                {% for i in news %}
+
+                <!-- Pc and laptops -->
+                <div class="card card-small z-depth-0 col l12 xl12 no-padding row hide-on-med-and-down" id="card_noticia">
+
+                     <div class="col l12 xl12 row no-padding" id="div_under_news">
+
+                        <div class="col l1 xl1">
+
+                            <p><i class="tiny material-icons">visibility</i> {{ i.acessos }}</p>
+
+                        </div>
+
+                         <div class="col l1 xl1">
+
+                            <p style="margin-top: 0px;"><i class="tiny material-icons">comment</i> {{ i.acessos }}</p>
+
+                         </div>
+
+
+                        <div class="col l7 xl7">
+
+
+                        </div>
+
+                         <div class="col l3 xl3 blue darken-4 white-text" style=" border-bottom: 1px solid #AAA;">
+
+                             <p class="right-align" id="text_data_new"> {{ i.data }} </p>
+
+                         </div>
+
+                        <div class="col l3 xl3 no-padding" id="div_img_noticia">
+
+                            <div id="img_noticia">
+                                <img class="materialboxed" src="{% static 'imagens/teste.jpg' %}">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col l9 xl9 " id="div_resto_do_card_noticia">
+                            <p id="titulo_noticia"><a href="">{{ i.titulo }}</a> </p>
+                            <p id="autor_noticia"> <i> por: {{ i.autor }}  </i> </p>
+                            <p id="previa_noticia"> {{ i.texto | truncatechars:60}} </p>
+
+                            <button id="btn_ler_mais_noticia">LEIA MAIS</button>
+
+                        </div>
+
+
+                     </div>
+
+                </div>
+
+                <!-- Mobile -->
+                <div class="card card-small container z-depth-0 col s12 m12 l12 xl12  hide-on-large-only no-padding  ">
+
+                     <div class="col s12 m12 no-padding" style="border-bottom: 1px solid #AAA;">
+                        <h2 class="header"> {{ i.titulo }} </h2>
+                        <div class="card horizontal">
+                          <div class="card-image">
+                            <img src="https://lorempixel.com/100/190/nature/6">
+                          </div>
+                          <div class="card-stacked">
+                            <div class="card-content">
+                                <p><i>por: {{ i.autor }} </i></p><br>
+
+                              <p> {{ i.texto | truncatechars:60 }} </p>
+
+                            </div>
+                            <div class="card-action">
+                              <a href="#">LEIA MAIS</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+
+        <div class="col l3 xl3"></div>
+
+    </div>
+
+     <div class="container row">
+
+            <div class="col m12 xl8">
+
+                <div class="no-padding hide-on-med-and-down">
+                    <span class="current no-padding">
+                        <ul class="pagination no-padding center-align">
+
+                            {% if news.has_previous %}
+                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="material-icons">chevron_left</i></a></li>
+                            {% endif %}
+
+
+                            {% for i in news.paginator.page_range %}
+
+                                {% ifequal i news.number %}
+                                    <li class="waves-effect active blue"><a href="?page={{ i }}">{{ i }}</a></li>
+                                {% else %}
+                                    <li class="waves-effect"><a href="?page={{ i }}">{{ i }}</a></li>
+                                {% endifequal %}
+
+                            {% endfor %}
+
+                            {% if news.has_next %}
+
+                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="material-icons">chevron_right</i></a></li>
+
+                            {% endif %}
+
+
+
+                        </ul>
+
+                    </span>
+                </div>
+
+                <div class="no-padding hide-on-large-only ">
+                    <span class="current no-padding">
+                        <ul class="pagination no-padding center-align">
+
+                            {% if news.has_previous %}
+                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="medium material-icons">chevron_left</i></a></li>
+                            {% endif %}
+
+
+                            {% for i in news.paginator.page_range %}
+
+                                {% ifequal i news.number %}
+                                    <li class="waves-effect active blue"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
+                                {% else %}
+                                    <li class="waves-effect"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
+                                {% endifequal %}
+
+                            {% endfor %}
+
+                            {% if news.has_next %}
+
+                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="medium material-icons">chevron_right</i></a></li>
+
+                            {% endif %}
+
+
+
+                        </ul>
+
+                    </span>
+                </div>
+
+
+            </div>
+
+            <div class="col xl4"></div>
+
+        </div>
+
+
+    <!-- Fim do conteudo-->
+    <!-- Rodape -->
+    <footer class="page-footer blue darken-3">
+            <div class="container row">
+
+                <div class="col xl4 l4 m12 s12 no-padding textos_footer">
+
+                    <ul>
+
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+                        <li class="hide-on-med-and-down"><b>CENTRO ESPÍRITA BEZERRA DE MENEZES</b></li>
+
+                        <br>
+                        <li>
+                            <p class="hide-on-large-only descricao_casa_footer">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                            <p class="hide-on-med-and-down" id="descricao_casa_footer_l_xl">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                        </li>
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>Links</b></li>
+                        <li class="hide-on-med-and-down"><b>Links</b></li>
+
+                        <br>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a class="white-text" href="admin">Administração</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="admin">Administração</a></li>
+
+
+                        <li class="textos_footer_mobile hide-on-large-only">Fale conosco</li>
+                        <li class="textos_footer hide-on-med-and-down">Fale conosco</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only">Quem somos</li>
+                        <li class="textos_footer hide-on-med-and-down">Quem somos</li>
+
+                        <li class="textos_footer_mobile hide-on-large-only"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
+
+                        <br>
+                    </ul>
+
+                </div>
+
+                <div class="col xl1 l1 m12 s12"></div>
+
+                <div class="col xl3 l3 m12 s12 no-padding">
+
+                    <ul>
+                        <li class="hide-on-large-only titulo_footer_mobile"><b>REDES SOCIAIS</b></li>
+                        <li class="hide-on-med-and-down"><b>REDES SOCIAIS</b></li>
+                    </ul>
+                    <div class="row">
+
+                        <div class="col xl8 no-padding">
+
+                            <img id="logo_fb" src="{% static 'imagens/icons8-Facebook-64.png' %}">
+                            <img id="logo_insta" src="{% static 'imagens/icons8-Instagram-64.png' %}">
+
+                        </div>
+
+                        <div class="col xl4"></div>
+
+                    </div>
+
+                </div>
+
+        </div>
+        <div class="footer-copyright blue darken-4">
+            <div class="container">
+                <a class="grey-text text-lighten-4 center" target="_blank" href="">Copyright © 2017 Centro Espírita Bezerra de Menezes - Todos os direitos reservados</a>
+                <br>
+                <a class="grey-text text-lighten-4 center" target="_blank" href="https://www.facebook.com/kairo.maggot">Feito por Kairo Costa</a>
+            </div>
+        </div>
+    <!-- Fim do rodape -->
+
+
+
+
+    </footer>
+</body>
+</html>
+
+
+
+
+<!-- geladeira
+
+<ul class="pagination no-padding">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active blue"><a href="noticias">1</a></li>
+                <li class="waves-effect"><a href="noticias">2</a></li>
+                <li class="waves-effect"><a href="noticias">3</a></li>
+                <li class="waves-effect"><a href="noticias">4</a></li>
+                <li class="waves-effect"><a href="noticias">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+-->

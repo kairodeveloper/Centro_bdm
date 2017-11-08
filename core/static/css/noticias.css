@@ -1,0 +1,304 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Estilizacao do menu superior */
+#area_menu_desktop{
+    height: 250px;
+    background-color: #FFF;
+}
+
+#area_menu_mobile{
+    height: 400px;
+    background-color: #FFF;
+}
+
+#logo_site_desktop{
+    margin-top: 15px;
+    height: 220px;
+}
+
+#logo_site_mobile{
+    margin-top: 25px;
+    height: 350px;
+}
+
+#logo_site_mobile_menor{
+    margin-top: 100px;
+    height: 200px;
+}
+
+.btns_menu{
+    margin-top: 160px;
+}
+
+
+#btn_menu{
+    height: 100px;
+    margin-top: 150px;
+}
+
+#btn_menu_menor{
+    height: 50px;
+    margin-top: 100px;
+}
+
+/* Menu mobile */
+
+.opcoes_menu_mobile{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+}
+
+.opcoes_menu_mobile p{
+    font-size: 30px;
+}
+
+/* Slide */
+.btn_slide_mobile{
+    border:1px solid #FFF;
+    height: 100px;
+    width: 180px;
+    background-color: white;
+    color: #ef6c00;
+    font-size: 24px;
+    opacity: 0.8;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+.btn_slide_desktop{
+    border:1px solid #FFF;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    color: #ef6c00;
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.btn_slide:hover{
+    background-color: #FFF;
+    color: #ef6c00;
+    opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+
+.fadeIn {
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/*Configuracao da div de ultimas noticias*/
+#div_noticias{
+    margin-top: 25px;
+}
+
+#card_noticia{
+    margin:0px;
+    margin-top: 25px;
+    height: 250px;
+    border-bottom: 1px solid #DDD;
+}
+
+#div_img_noticia{
+    height: 250px;
+    border: none;
+    margin-top: 5px;
+}
+
+#img_noticia{
+    height: 250px;
+
+}
+
+#img_noticia img{
+    height:200px;
+}
+
+#div_resto_do_card_noticia{
+    margin-top: 10px;
+}
+
+#text_data_new{
+    font-weight: bold;
+}
+
+#titulo_noticia{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#titulo_noticia a{
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+
+#titulo_noticia a:hover{
+    color: #0d47a1;
+}
+
+#autor_noticia{
+    font-size: 18px;
+}
+
+#previa_noticia{
+    font-size: 16px;
+    margint-top: 20px;
+    text-align: justify;
+    color: #656565;
+}
+
+#btn_ler_mais_noticia{
+    border-radius: 0px;
+    border: 2px solid #000;
+    background-color: #FFF;
+    height: 50px;
+    width: 120px;
+}
+
+#btn_ler_mais_noticia:hover{
+    border: 2px solid #0d47a1;
+    background-color: #FFF;
+    color: #0d47a1;
+
+}
+
+@media screen and (max-width: 1760px) {
+
+    #div_img_noticia{
+        height: 200px;
+        border: none;
+        margin-top: 5px;
+
+    }
+
+    #img_noticia{
+        height: 200px;
+
+    }
+
+    #img_noticia img{
+        height:150px;
+    }
+
+    #div_resto_do_card_noticia{
+        margin-top: 10px;
+    }
+
+    #text_data_new{
+        font-weight: bold;
+    }
+
+    #titulo_noticia{
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    #titulo_noticia a{
+        font-family: Montserrat,Arial, Helvetica, sans-serif;
+        color: #000;
+        text-decoration: none;
+    }
+
+    #titulo_noticia a:hover{
+        color: #0d47a1;
+    }
+
+    #autor_noticia{
+        font-size: 18px;
+    }
+
+    #previa_noticia{
+        font-size: 16px;
+        margint-top: 20px;
+        text-align: justify;
+        color: #656565;
+    }
+
+    #btn_ler_mais_noticia{
+        border-radius: 0px;
+        border: 2px solid #000;
+        background-color: #FFF;
+        height: 50px;
+        width: 120px;
+    }
+
+    #btn_ler_mais_noticia:hover{
+        border: 2px solid #0d47a1;
+        background-color: #FFF;
+        color: #0d47a1;
+
+    }
+
+}
+
+/*footer*/
+#area_footer{
+    height: 219px;
+    padding: 0px;
+}
+
+#textos_footer{
+    text-align: justify; font-family: Montserrat,Arial, Helvetica, sans-serif; font-size: 12px;
+}
+
+.titulo_footer_mobile{
+    font-size: 28px;
+}
+
+.descricao_casa_footer{
+    font-size: 24px;
+    text-align: justify;
+}
+
+#descricao_casa_footer_l_xl{
+    text-align: justify;
+}
+
+.textos_footer_mobile{
+    font-size: 24px;
+}
+
+#logo_insta{
+    height: 75px;
+    margin-top: 0px;
+}
+
+#logo_fb{
+    height: 75px;
+}
+
+/* Usado para verificar o alinhamento de todos */
+
+.alinhamento{
+    border: 1px solid #000;
+}
+
+
