@@ -5,12 +5,13 @@
 <head>
     <!-- Importacoes -->
     {% include "importacoes.html" %}
-    <link rel="stylesheet" href="{% static 'css/noticias.css' %}">
-    <script src="{% static 'js/noticias.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/quemsomos.css' %}">
+    <script src="{% static 'js/quemsomos.js' %}"></script>
 
 
     <meta charset="UTF-8">
-    <title>Notícias | Centro Espírita Bezerra de Meneses</title>
+    <title>Quem Somos | Centro Espírita Bezerra de Meneses</title>
 
 </head>
 
@@ -19,7 +20,7 @@
     <!-- Menu superior -->
 
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="quemsomos" class="blue-text">QUEM SOMOS</a></li>
+      <li class="active"><a href="quemsomos" class="blue-text">QUEM SOMOS</a></li>
       <li><a href="galeria" class="blue-text">GALERIA</a></li>
       <li><a href="contato" class="blue-text">CONTATO</a></li>
     </ul>
@@ -33,7 +34,7 @@
             <ul class="right hide-on-med-and-down btns_menu">
                 <li><a href="home" class=" blue-text darken-4">INÍCIO</p></a></li>
                 <li><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
-                <li class="active"><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
+                <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
                 <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
 
@@ -56,8 +57,8 @@
                 <li><a class="opcoes_menu_mobile black white-text" href="#"><p>FECHAR</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="home"><p>INÍCIO</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="atividades"><p>ATIVIDADES</p></a></li>
-                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="quemsomos"><p>QUEM SOMOS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="quemsomos"><p>QUEM SOMOS</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="galeria"><p>GALERIA</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="contato"><p>CONTATO</p></a></li>
             </ul>
@@ -65,146 +66,69 @@
 
     </nav>
 
-
-    <!-- Fim do menu -->
-    <!-- Conteudo-->
-
     <nav>
         <div class="nav-wrapper blue darken-3 z-depth-0 nav_localizacao">
             <div class="col container s12 hide-on-med-and-down">
                 <a href="#!" class="breadcrumb">Início</a>
-                <a href="#!" class="breadcrumb">Notícias</a>
+                <a href="#!" class="breadcrumb">Quem somos</a>
             </div>
             <div class="col container s12 hide-on-large-only">
                 <a href="#!" class="breadcrumb" style="font-size: 24px;">Início</a>
-                <a href="#!" class="breadcrumb" style="font-size: 24px;">Notícias</a>
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Quem somos</a>
             </div>
         </div>
     </nav>
 
-    <div class="container row" id="div_noticias">
+    <!-- Fim do menu -->
 
-            <div class="col m12 l8 xl8 no-padding">
+    <!-- Conteudo -->
 
-                {% for i in news %}
+    <div class="container row conteudo">
+        
+        {% for i in participantes %}
 
-                <!--Pc e Mobile -->
-                <div class="card card-small container z-depth-0 col s12 m12 l12 xl12 no-padding  ">
-
-                     <div class="col s12 m12 no-padding" style="border-bottom: 1px solid #AAA;">
-                        <h3 class="header"> {{ i.titulo }} </h2>
-                        <div class="card horizontal">
-                          <div  class="card-image" style="padding:10px;">
-                            <img src="{% static 'imagens/teste.jpg' %}">
-                          </div>
-                          <div class="card-stacked">
-                            <div style="padding:10px;">
-                                <p class="blue-text right-align"> {{ i.data }} </p>
-                            </div>
-                            <div class="card-content">
-                                <p><i>por: {{ i.autor }} </i></p><br>
-
-                              <p> {{ i.texto | truncatechars:60 }} </p>
-
-                            </div>
-                            <div class="card-action">
-                              <a href="#">LEIA MAIS</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                {% endfor %}
-
-
+        <div class="card col xl3 l6 z-depth-0 hide-on-med-and-down">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{% static 'imagens/office.jpg' %}">
             </div>
-
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4" id="nome"> {{ i.nome }} {{ i.sobrenome }}</span>
+                <p class="blue-text" id="email"> {{ i.email }} </a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4" style="border-bottom: 1px #AAA solid;" id="nome_completo"> {{ i.nome_completo }} <i class="material-icons right">close</i></span>
+                <p> {{ i.email }} </p>
+                <p id="descricao"> {{ i.descricao }} </p>
+            </div>
         </div>
+            
+        {% endfor %}
 
-        <div class="col l3 xl3"></div>
+        {% for i in participantes %}
+
+        <div class="card col m12 s12 z-depth-0 hide-on-large-only">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{% static 'imagens/office.jpg' %}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4" id="nome"> {{ i.nome }} {{ i.sobrenome }}</span>
+                <p class="blue-text" id="email"> {{ i.email }} </a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4" style="border-bottom: 1px #AAA solid;" id="nome_completo"> {{ i.nome_completo }} <i class="material-icons right">close</i></span>
+                <p> {{ i.email }} </p>
+                <p id="descricao"> {{ i.descricao }} </p>
+            </div>
+        </div>
+            
+        {% endfor %}
+        
+        
 
     </div>
 
-     <div class="container row">
+    <!-- Fim do conteudo -->
 
-            <div class="col m12 xl8">
-
-                <div class="no-padding hide-on-med-and-down">
-                    <span class="current no-padding">
-                        <ul class="pagination no-padding center-align">
-
-                            {% if news.has_previous %}
-                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="material-icons">chevron_left</i></a></li>
-                            {% endif %}
-
-
-                            {% for i in news.paginator.page_range %}
-
-                                {% ifequal i news.number %}
-                                    <li class="waves-effect active blue"><a href="?page={{ i }}">{{ i }}</a></li>
-                                {% else %}
-                                    <li class="waves-effect"><a href="?page={{ i }}">{{ i }}</a></li>
-                                {% endifequal %}
-
-                            {% endfor %}
-
-                            {% if news.has_next %}
-
-                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="material-icons">chevron_right</i></a></li>
-
-                            {% endif %}
-
-
-
-                        </ul>
-
-                    </span>
-                </div>
-
-                <div class="no-padding hide-on-large-only ">
-                    <span class="current no-padding">
-                        <ul class="pagination no-padding center-align">
-
-                            {% if news.has_previous %}
-                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="medium material-icons">chevron_left</i></a></li>
-                            {% endif %}
-
-
-                            {% for i in news.paginator.page_range %}
-
-                                {% ifequal i news.number %}
-                                    <li class="waves-effect active blue"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
-                                {% else %}
-                                    <li class="waves-effect"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
-                                {% endifequal %}
-
-                            {% endfor %}
-
-                            {% if news.has_next %}
-
-                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="medium material-icons">chevron_right</i></a></li>
-
-                            {% endif %}
-
-
-
-                        </ul>
-
-                    </span>
-                </div>
-
-
-            </div>
-
-            <div class="col xl4"></div>
-
-        </div>
-
-
-    <!-- Fim do conteudo-->
     <!-- Rodape -->
     <footer class="page-footer blue darken-3">
             <div class="container row">
@@ -219,9 +143,9 @@
                         <br>
                         <li>
                             <p class="hide-on-large-only descricao_casa_footer">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
-                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
-                            <p class="hide-on-med-and-down" id="descricao_casa_footer_l_xl">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
-                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                            <p class="hide-on-med-and-down">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
                         </li>
                         <br>
                     </ul>
@@ -301,13 +225,5 @@
 
 <!-- geladeira
 
-<ul class="pagination no-padding">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active blue"><a href="noticias">1</a></li>
-                <li class="waves-effect"><a href="noticias">2</a></li>
-                <li class="waves-effect"><a href="noticias">3</a></li>
-                <li class="waves-effect"><a href="noticias">4</a></li>
-                <li class="waves-effect"><a href="noticias">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
+
 -->

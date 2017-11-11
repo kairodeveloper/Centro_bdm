@@ -10,7 +10,7 @@
 
 
     <meta charset="UTF-8">
-    <title>Bem Vindo | Centro Espírita Bezerra de Meneses</title>
+    <title>Atividades | Centro Espírita Bezerra de Meneses</title>
 
 </head>
 
@@ -19,9 +19,9 @@
     <!-- Menu superior -->
 
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">QUEM SOMOS</a></li>
-      <li><a href="#!">GALERIA</a></li>
-      <li><a href="#!">CONTATO</a></li>
+      <li><a href="quemsomos" class="blue-text">QUEM SOMOS</a></li>
+      <li><a href="galeria" class="blue-text">GALERIA</a></li>
+      <li><a href="contato" class="blue-text">CONTATO</a></li>
     </ul>
 
     <nav id="area_menu_desktop" class="hide-on-med-and-down">
@@ -31,7 +31,7 @@
             <a href="" class="brand-logo"><img id="logo_site_desktop" src="{% static 'imagens/logo_centro.png' %}"></a>
 
             <ul class="right hide-on-med-and-down btns_menu">
-                <li><a href="home" class=" teal-text darken-4">INÍCIO</p></a></li>
+                <li><a href="home" class=" blue-text darken-4">INÍCIO</p></a></li>
                 <li class="active"><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
                 <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
                 <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -44,8 +44,6 @@
 
     <nav id="area_menu_mobile" class="hide-on-large-only">
 
-        <div class="nav-wrapper container">
-
             <a href="" class="brand-logo hide-on-small-only"><img id="logo_site_mobile" src="{% static 'imagens/logo_centro.png' %}"></a>
             <a href="" class="brand-logo hide-on-med-and-up"><img id="logo_site_mobile_menor" src="{% static 'imagens/logo_centro.png' %}"></a>
 
@@ -53,12 +51,13 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><img id="btn_menu_menor" src="{% static 'imagens/menu.png' %}"></a>
 
             <ul class="side-nav" id="mobile-demo">
-                <li><a class="opcoes_menu_mobile" href=""><p>INÍCIO</p></a></li>
-                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="#"><p>ATIVIDADES</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>NOTÍCIAS</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>SOBRE NÓS</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>CONTATO</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>GALERIA</p></a></li>
+                <li><a class="opcoes_menu_mobile black white-text" href="#"><p>FECHAR</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="home"><p>INÍCIO</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="atividades"><p>ATIVIDADES</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="quemsomos"><p>QUEM SOMOS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="galeria"><p>GALERIA</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="contato"><p>CONTATO</p></a></li>
             </ul>
         </div>
 
@@ -68,9 +67,13 @@
 
     <nav>
         <div class="nav-wrapper blue darken-3 z-depth-0 nav_localizacao">
-            <div class="col container s12">
-                <a href="#!" class="breadcrumb">Home</a>
+            <div class="col container s12 hide-on-med-and-down">
+                <a href="#!" class="breadcrumb">Início</a>
                 <a href="#!" class="breadcrumb">Atividades</a>
+            </div>
+            <div class="col container s12 hide-on-large-only">
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Início</a>
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Atividades</a>
             </div>
         </div>
     </nav>
@@ -79,209 +82,193 @@
 
     <div class="row" id="area_last_news">
 
-        <div class="col xl2"></div>
-
-        <div class="col xl8 no-padding">
+        <div class="container">
 
             <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
+            <div class="nav-wrapper">
+                
+                <ul class="collapsible atividades" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">book</i>
+                            DIVULGAÇÃO DO EVANGELHO
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
 
-                    <p>DIVULGAÇÃO DO EVANGELHO</p>
+                            <table class="bordered highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Atividade</th>
+                                        <th>Dia</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
 
-                </div>
+                                <tbody>
+                                    <tr>
+                                        <td>EVANGELHO EM LARES NAS VILAS EM TERESINA-PI E EM TIMON-MA (CASA DOS PEQUENINOS E CANTINHO DE LUZ CHICO XAVIER)</td>
+                                        <td>1º DOMINGO DE CADA MÊS</td>
+                                        <td>07:30 às 11:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CARAVANA DO EVANGELHO NO LAR</td>
+                                        <td>1º SÁBADO DE CADA MÊS</td>
+                                        <td>13:30 às 11:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAFÉ DA MANHÃ COM MORADORES DE RUA E PEDINTES NO CENTRO DE TERESINA</td>
+                                        <td>3º DOMINGO DE CADA MÊS</td>
+                                        <td>06:00 às 09:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                <div class="col xl1"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">directions_walk</i>
+                            ENCONTRO COM IDOSOS
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
 
-                <div class="col xl9">
+                            <table class="bordered highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Atividade</th>
+                                        <th>Dia</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
 
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>VISITA AO ABRIGO DE IDOSO VILA DO ANCIÃO</td>
+                                        <td>2º DOMINGO DE CADA MÊS</td>
+                                        <td>07:40 às 11:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>VISITA AO ABRIGO DE IDOSOS CASA FREDERICO OZANAN</td>
+                                        <td>4º DOMINGO DE CADA MÊS</td>
+                                        <td>08:40 às 11:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">local_hospital</i>
+                            ENCONTRO COM ENFERMOS
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
 
-                        <tbody>
-                            <tr>
-                                <td>EVANGELHO EM LARES NAS VILAS EM TERESINA-PI E EM TIMON-MA (CASA DOS PEQUENINOS E CANTINHO DE LUZ CHICO XAVIER)</td>
-                                <td>1º DOMINGO DE CADA MÊS</td>
-                                <td>07:30 às 11:30</td>
-                            </tr>
-                            <tr>
-                                <td>CARAVANA DO EVANGELHO NO LAR</td>
-                                <td>1º SÁBADO DE CADA MÊS</td>
-                                <td>13:30 às 11:30</td>
-                            </tr>
-                            <tr>
-                                <td>CAFÉ DA MANHÃ COM MORADORES DE RUA E PEDINTES NO CENTRO DE TERESINA</td>
-                                <td>3º DOMINGO DE CADA MÊS</td>
-                                <td>06:00 às 09:30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                            <table class="bordered highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Atividade</th>
+                                        <th>Dia</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>VISITA AO HOSPITAL GETÚLIO VARGAS - HGV</td>
+                                        <td>1ª SEGUNDA-FEIRA DE CADA MÊS</td>
+                                        <td>19:00 às 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>VISITA AO HOSPITAL PSIQUIÁTRICO AREOLINO DE ABREU</td>
+                                        <td>3ª SEGUNDA-FEIRA DE CADA MÊS</td>
+                                        <td>18:30 às 21:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">people</i>
+                            ENCONTRO COM DEPENDENTES QUÍMICOS
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
+
+                            <table class="bordered highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Atividade</th>
+                                        <th>Dia</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>VISITA AO HOSPITAL DO MOCAMBINHO(REGIÃO NORTE DE TERESINA)</td>
+                                        <td>3ª QUARTA-FEIRA DE CADA MÊS</td>
+                                        <td>19:15 às 21:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">vpn_lock</i>
+                            ENCONTRO COM ENCARCERADOS
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
+
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">favorite</i>
+                            CARIDADE EM AÇÃO
+                            <span class="badge"><i class="material-icons">keyboard_arrow_down</i></span>
+                        </div>
+                        <div class="collapsible-body grey lighten-4">
+
+                            <table class="bordered highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Atividade</th>
+                                        <th>Dia</th>
+                                        <th>Horário</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>CAMPANHA FRATERNA AUTA DE SOUZA(CAMPANHA DO KILO)</td>
+                                        <td>TODOS OS SÁBADOS</td>
+                                        <td>17:10 às 18:10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </li>
+                </ul>
+                
+                
             </div>
-            <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
-
-                    <p>ENCONTRO COM IDOSOS</p>
-
-                </div>
+        
+            <div class="row no-padding">
+                <div class="col xl2 area_da_esquerda valign-wrapper white z-depth-0 center-align"></div>
 
                 <div class="col xl1"></div>
 
-                <div class="col xl9">
-
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>VISITA AO ABRIGO DE IDOSO VILA DO ANCIÃO</td>
-                                <td>2º DOMINGO DE CADA MÊS</td>
-                                <td>07:40 às 11:00</td>
-                            </tr>
-                            <tr>
-                                <td>VISITA AO ABRIGO DE IDOSOS CASA FREDERICO OZANAN</td>
-                                <td>4º DOMINGO DE CADA MÊS</td>
-                                <td>08:40 às 11:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
-
-                    <p>ENCONTRO COM ENFERMOS</p>
-
-                </div>
-
-                <div class="col xl1"></div>
-
-                <div class="col xl9">
-
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>VISITA AO HOSPITAL GETÚLIO VARGAS - HGV</td>
-                                <td>1ª SEGUNDA-FEIRA DE CADA MÊS</td>
-                                <td>19:00 às 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>VISITA AO HOSPITAL PSIQUIÁTRICO AREOLINO DE ABREU</td>
-                                <td>3ª SEGUNDA-FEIRA DE CADA MÊS</td>
-                                <td>18:30 às 21:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
-
-                    <p>ENCONTRO COM DEPENDENTES QUÍMICOS</p>
-
-                </div>
-
-                <div class="col xl1"></div>
-
-                <div class="col xl9">
-
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>VISITA AO HOSPITAL DO MOCAMBINHO(REGIÃO NORTE DE TERESINA)</td>
-                                <td>3ª QUARTA-FEIRA DE CADA MÊS</td>
-                                <td>19:15 às 21:30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
-
-                    <p>ENCONTRO COM ENCARCERADOS</p>
-
-                </div>
-
-                <div class="col xl1"></div>
-
-                <div class="col xl9">
-
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>VISITA A PENITENCIÁRIA MAJOR CÉSAR</td>
-                                <td>TODA TERÇA-FEIRA</td>
-                                <td>13:00 às 16:40</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row area_das_atividades no-padding">
-                <div class="col xl2 area_da_esquerda valign-wrapper z-depth-2 center-align white-text">
-
-                    <p>CARIDADE EM AÇÃO</p>
-
-                </div>
-
-                <div class="col xl1"></div>
-
-                <div class="col xl9">
-
-                    <table class="bordered highlight">
-                        <thead>
-                            <tr>
-                                <th>Atividade</th>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>CAMPANHA FRATERNA AUTA DE SOUZA(CAMPANHA DO KILO)</td>
-                                <td>TODOS OS SÁBADOS</td>
-                                <td>17:10 às 18:10</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <div class="col xl9"></div>
             </div>
 
 

@@ -5,12 +5,13 @@
 <head>
     <!-- Importacoes -->
     {% include "importacoes.html" %}
-    <link rel="stylesheet" href="{% static 'css/noticias.css' %}">
-    <script src="{% static 'js/noticias.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+    <script src="{% static 'js/contato.js' %}"></script>
 
 
     <meta charset="UTF-8">
-    <title>Notícias | Centro Espírita Bezerra de Meneses</title>
+    <title>Contato | Centro Espírita Bezerra de Meneses</title>
 
 </head>
 
@@ -21,7 +22,7 @@
     <ul id="dropdown1" class="dropdown-content">
       <li><a href="quemsomos" class="blue-text">QUEM SOMOS</a></li>
       <li><a href="galeria" class="blue-text">GALERIA</a></li>
-      <li><a href="contato" class="blue-text">CONTATO</a></li>
+      <li class="active"><a href="contato" class="blue-text">CONTATO</a></li>
     </ul>
 
     <nav id="area_menu_desktop" class="hide-on-med-and-down">
@@ -33,7 +34,7 @@
             <ul class="right hide-on-med-and-down btns_menu">
                 <li><a href="home" class=" blue-text darken-4">INÍCIO</p></a></li>
                 <li><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
-                <li class="active"><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
+                <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
                 <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
 
@@ -56,155 +57,79 @@
                 <li><a class="opcoes_menu_mobile black white-text" href="#"><p>FECHAR</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="home"><p>INÍCIO</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="atividades"><p>ATIVIDADES</p></a></li>
-                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="quemsomos"><p>QUEM SOMOS</p></a></li>
                 <li><a class="opcoes_menu_mobile" href="galeria"><p>GALERIA</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="contato"><p>CONTATO</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="contato"><p>CONTATO</p></a></li>
             </ul>
         </div>
 
     </nav>
 
-
-    <!-- Fim do menu -->
-    <!-- Conteudo-->
-
     <nav>
         <div class="nav-wrapper blue darken-3 z-depth-0 nav_localizacao">
             <div class="col container s12 hide-on-med-and-down">
                 <a href="#!" class="breadcrumb">Início</a>
-                <a href="#!" class="breadcrumb">Notícias</a>
+                <a href="#!" class="breadcrumb">Contato</a>
             </div>
             <div class="col container s12 hide-on-large-only">
                 <a href="#!" class="breadcrumb" style="font-size: 24px;">Início</a>
-                <a href="#!" class="breadcrumb" style="font-size: 24px;">Notícias</a>
+                <a href="#!" class="breadcrumb" style="font-size: 24px;">Contato</a>
             </div>
         </div>
     </nav>
 
-    <div class="container row" id="div_noticias">
+    <!-- Fim do menu -->
 
-            <div class="col m12 l8 xl8 no-padding">
+    <!-- Conteudo -->
 
-                {% for i in news %}
+    <div id="espaco"></div>
+    <div class="container row area_de_dados_para_contato">
 
-                <!--Pc e Mobile -->
-                <div class="card card-small container z-depth-0 col s12 m12 l12 xl12 no-padding  ">
+        <div class="col xl6 l6 m12 s12 no-padding">
+            <p class="dado_contato">Centro Espirita Bezerra de Menezes</p>
+            <p class="dado_contato">R. Rui Barbosa, 2715 - Matadouro</p>
+            <p class="dado_contato">Teresina - PI, 64004-285</p>
+            <p class="dado_contato">Telefone: (86) 0000-0000</p>
+            <p class="dado_contato">Email: emaildacasa@email.com</p>
+        </div>
 
-                     <div class="col s12 m12 no-padding" style="border-bottom: 1px solid #AAA;">
-                        <h3 class="header"> {{ i.titulo }} </h2>
-                        <div class="card horizontal">
-                          <div  class="card-image" style="padding:10px;">
-                            <img src="{% static 'imagens/teste.jpg' %}">
-                          </div>
-                          <div class="card-stacked">
-                            <div style="padding:10px;">
-                                <p class="blue-text right-align"> {{ i.data }} </p>
-                            </div>
-                            <div class="card-content">
-                                <p><i>por: {{ i.autor }} </i></p><br>
+        <div class="col xl6 l6 m12 s12 no-padding">
 
-                              <p> {{ i.texto | truncatechars:60 }} </p>
+            <p class="dado_contato">Fale Conosco</p>
 
-                            </div>
-                            <div class="card-action">
-                              <a href="#">LEIA MAIS</a>
-                            </div>
-                          </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Nome *</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="Insira um email válido" data-success="Aceito">Email *</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Sua mensagem *</label>
+                        </div>
+                        <div class="col xl12 l12 m12 s12">
+
+                            <div class="col xl8 l8 m8 s8"></div>
+
+                            <button class="btn waves-effect waves-light col xl4 l4 m4 s4" type="submit" name="action">ENVIAR</button>
+
                         </div>
                     </div>
-
-                </div>
-
-
-                {% endfor %}
-
-
+                </form>
             </div>
 
         </div>
-
-        <div class="col l3 xl3"></div>
 
     </div>
 
-     <div class="container row">
+    <!-- Fim do conteudo -->
 
-            <div class="col m12 xl8">
-
-                <div class="no-padding hide-on-med-and-down">
-                    <span class="current no-padding">
-                        <ul class="pagination no-padding center-align">
-
-                            {% if news.has_previous %}
-                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="material-icons">chevron_left</i></a></li>
-                            {% endif %}
-
-
-                            {% for i in news.paginator.page_range %}
-
-                                {% ifequal i news.number %}
-                                    <li class="waves-effect active blue"><a href="?page={{ i }}">{{ i }}</a></li>
-                                {% else %}
-                                    <li class="waves-effect"><a href="?page={{ i }}">{{ i }}</a></li>
-                                {% endifequal %}
-
-                            {% endfor %}
-
-                            {% if news.has_next %}
-
-                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="material-icons">chevron_right</i></a></li>
-
-                            {% endif %}
-
-
-
-                        </ul>
-
-                    </span>
-                </div>
-
-                <div class="no-padding hide-on-large-only ">
-                    <span class="current no-padding">
-                        <ul class="pagination no-padding center-align">
-
-                            {% if news.has_previous %}
-                                <li class="waves-effect"><a href="?page={{ news.previous_page_number }}"><i class="medium material-icons">chevron_left</i></a></li>
-                            {% endif %}
-
-
-                            {% for i in news.paginator.page_range %}
-
-                                {% ifequal i news.number %}
-                                    <li class="waves-effect active blue"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
-                                {% else %}
-                                    <li class="waves-effect"><a style="font-size:24px;" href="?page={{ i }}">{{ i }}</a></li>
-                                {% endifequal %}
-
-                            {% endfor %}
-
-                            {% if news.has_next %}
-
-                                <li class="waves-effect"><a href="?page={{ news.next_page_number }}"><i class="medium material-icons">chevron_right</i></a></li>
-
-                            {% endif %}
-
-
-
-                        </ul>
-
-                    </span>
-                </div>
-
-
-            </div>
-
-            <div class="col xl4"></div>
-
-        </div>
-
-
-    <!-- Fim do conteudo-->
     <!-- Rodape -->
     <footer class="page-footer blue darken-3">
             <div class="container row">
@@ -219,9 +144,9 @@
                         <br>
                         <li>
                             <p class="hide-on-large-only descricao_casa_footer">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
-                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
-                            <p class="hide-on-med-and-down" id="descricao_casa_footer_l_xl">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
-                                Foi fundado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
+                            <p class="hide-on-med-and-down">Fundado em 1948, foi o primeiro centro espírita da capital do Piauí, Teresina.
+                                Foi fudado pelo Sr. Severo de Sousa juntamente com sua esposa. Desde o início, em funcionamento no bairro Acarape.</p>
                         </li>
                         <br>
                     </ul>
@@ -301,13 +226,5 @@
 
 <!-- geladeira
 
-<ul class="pagination no-padding">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active blue"><a href="noticias">1</a></li>
-                <li class="waves-effect"><a href="noticias">2</a></li>
-                <li class="waves-effect"><a href="noticias">3</a></li>
-                <li class="waves-effect"><a href="noticias">4</a></li>
-                <li class="waves-effect"><a href="noticias">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
+
 -->

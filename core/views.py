@@ -7,7 +7,11 @@ from django.core.urlresolvers import reverse_lazy, reverse
 
 # Create your views here.
 def home(request):
-    return render(request, 'core/home.html', {})
+    noticias = Noticia.objects.all()
+    noticias = noticias[::-1]
+    recentes = noticias[0:3]
+
+    return render(request, 'core/home.html', {'recentes':recentes})
 
 
 def atividades(request):
@@ -15,6 +19,7 @@ def atividades(request):
 
 def noticias(request):
     news = Noticia.objects.all()
+    news = news[::-1]
     paginator = Paginator(news,5)
 
     # Esteja certo de que o `page request` é um inteiro. Se não, mostre a primeira página.
@@ -30,3 +35,10 @@ def noticias(request):
         news = paginator.page(paginator.num_pages)
 
     return render_to_response('core/noticias.html',{'news':news})
+
+def quemsomos(request):
+    participantes = Participante.objects.all()
+    return render(request, 'core/quemsomos.html',{'participantes':participantes})
+
+def contato(request):
+    return render(request, 'core/contato.html', {})

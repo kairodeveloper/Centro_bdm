@@ -19,9 +19,9 @@
     <!-- Menu superior -->
 
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">QUEM SOMOS</a></li>
-      <li><a href="#!">GALERIA</a></li>
-      <li><a href="#!">CONTATO</a></li>
+      <li><a href="quemsomos" class="blue-text">QUEM SOMOS</a></li>
+      <li><a href="galeria" class="blue-text">GALERIA</a></li>
+      <li><a href="contato" class="blue-text">CONTATO</a></li>
     </ul>
 
     <nav id="area_menu_desktop" class="hide-on-med-and-down">
@@ -31,7 +31,7 @@
             <a href="" class="brand-logo"><img id="logo_site_desktop" src="{% static 'imagens/logo_centro.png' %}"></a>
 
             <ul class="right hide-on-med-and-down btns_menu">
-                <li class="active"><a href="" class=" teal-text darken-4">INÍCIO</p></a></li>
+                <li class="active"><a href="" class=" blue-text darken-4">INÍCIO</p></a></li>
                 <li><a href="atividades" class="blue-text darken-4">ATIVIDADES</a></li>
                 <li><a href="noticias" class="blue-text darken-4">NOTÍCIAS</a></li>
                 <li><a class="dropdown-button blue-text darken-4" href="#!" data-activates="dropdown1">SOBRE NÓS<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -53,12 +53,13 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><img id="btn_menu_menor" src="{% static 'imagens/menu.png' %}"></a>
 
             <ul class="side-nav" id="mobile-demo">
-                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href=""><p>INÍCIO</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>ATIVIDADES</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>NOTÍCIAS</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>SOBRE NÓS</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>CONTATO</p></a></li>
-                <li><a class="opcoes_menu_mobile" href="#"><p>GALERIA</p></a></li>
+                <li><a class="opcoes_menu_mobile black white-text" href="#"><p>FECHAR</p></a></li>
+                <li class="active" id="ativo"><a class="opcoes_menu_mobile" href="home"><p>INÍCIO</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="atividades"><p>ATIVIDADES</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="noticias"><p>NOTÍCIAS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="quemsomos"><p>QUEM SOMOS</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="galeria"><p>GALERIA</p></a></li>
+                <li><a class="opcoes_menu_mobile" href="contato"><p>CONTATO</p></a></li>
             </ul>
         </div>
 
@@ -114,6 +115,7 @@
                     <button class="hide-on-med-and-down btn_slide_desktop">LEIA MAIS</button>
                 </div>
             </li>
+
         </ul>
     </div>
     <!-- Fim do slide -->
@@ -121,34 +123,29 @@
 
     <div class="row" id="area_titulo_last_news">
 
-        <div class="col xl2"></div>
-
-        <div class="col xl8 m12" id="container_titulo">
+        <div class="container" id="container_titulo">
             <h1 class="hide-on-large-only text-align center titulos">ÚLTIMAS NOTÍCIAS</h1>
             <h4 class="hide-on-med-and-down text-align center titulos">ÚLTIMAS NOTÍCIAS</h4>
 
         </div>
 
-        <div class="col xl2"></div>
-
     </div>
 
     <div class="row" id="area_last_news">
 
-        <div class="col xl2"></div>
-
-        <div class="col xl8">
-
+        <div class="container">
             <div class="row hide-on-large-only ">
+                
+                {% for i in recentes %}
+                
                 <div class="col s12 m12">
                     <div class="card-mobile card large hoverable">
                         <div class="card-image">
                             <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Salve sua vida</span>
+                            <span class="card-title titulo_noticia"> {{ i.titulo }} </span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                            <p> {{ i.texto | truncatechars:60 }} </p>
                         </div>
                         <div class="card-action">
                             <a href="#">Leia Mais</a>
@@ -156,50 +153,23 @@
                     </div>
                 </div>
 
+                {% endfor %}
 
-                <div class="col s12 m12">
-                    <div class="card-mobile card large hoverable">
-                        <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Nature of my game</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">LEIA MAIS</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m12">
-                    <div class="card-mobile card large hoverable">
-                        <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Behind blue eyes</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">LEIA MAIS</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="row hide-on-med-and-down ">
-                <div class="col xl4 l4 s12 m12">
+            
+            <div class="row hide-on-med-and-down " style="display: inline-block;">
+                
+                {% for i in recentes %}
+
+                <div class="col xl4 l4">
                     <div class="card medium hoverable">
                         <div class="card-image">
                             <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Salve sua vida</span>
+                            <span class="card-title titulo_noticia"> {{ i.titulo|truncatechars:30 }} </span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                            <p>{{ i.texto | truncatechars:60 }}</p>
                         </div>
                         <div class="card-action">
                             <a href="#">Leia Mais</a>
@@ -207,44 +177,13 @@
                     </div>
                 </div>
 
+                {% endfor %}
 
-                <div class="col xl4 l4 s12 m12">
-                    <div class="card medium hoverable">
-                        <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Nature of my game</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">LEIA MAIS</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col xl4 l4 s12 m12">
-                    <div class="card medium hoverable">
-                        <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
-                            <span class="card-title titulo_noticia">Behind blue eyes</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">LEIA MAIS</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
+        
 
         </div>
-
-        <div class="col xl2"></div>
 
     </div>
     <!-- Fim das noticias -->
@@ -253,18 +192,16 @@
 
 
      <div class="row" id="area_eventos">
-        <div class=" col xl4 m2 s1"></div>
-        <div class=" col xl4 m8 s10">
+        <div class="container">
 
             <h1 class="hide-on-large-only text-align center titulos">EVENTOS DO MÊS</h1>
             <h4 class="hide-on-med-and-down text-align center titulos">EVENTOS DO MÊS</h4>
 
         </div>
-        <div class=" col xl4 m2 s1"></div>
+
     </div>
-    <div class="row ">
-        <div class="col xl2"></div>
-        <div class="col xl8 m12 s12 ">
+    <div class="row">
+        <div class="container no-padding">
 
             <div class="row no-padding hide-on-med-and-down">
 
@@ -423,7 +360,7 @@
 
     <div class="row">
         <div class="col xl2"></div>
-        <div class="col xl8 m12 s12" id="map">
+        <div class="container no-padding" id="map">
 
             <div class="row">
 

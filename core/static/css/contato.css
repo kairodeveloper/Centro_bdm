@@ -57,11 +57,36 @@
     font-size: 30px;
 }
 
-/*Localizacao de navegacao*/
-.nav_localizacao{
-    background-color: #;
+/* Slide */
+.btn_slide_mobile{
+    border:1px solid #FFF;
+    height: 100px;
+    width: 180px;
+    background-color: white;
+    color: #ef6c00;
+    font-size: 24px;
+    opacity: 0.8;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+.btn_slide_desktop{
+    border:1px solid #FFF;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    color: #ef6c00;
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
 }
 
+
+.btn_slide:hover{
+    background-color: #FFF;
+    color: #ef6c00;
+    opacity: 1;
+}
 
 @-webkit-keyframes fadeIn {
 0% { opacity: 0; }
@@ -88,11 +113,17 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
-
-/*area das atividades*/
-.atividades{
-    margin-top:50px;
+/*Conteudo*/
+.area_de_dados_para_contato{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+.dado_contato{
+    font-size: 22px;
+    color: #777;
+}
+
 /*footer*/
 #area_footer{
     height: 219px;
@@ -129,4 +160,5 @@
 .alinhamento{
     border: 1px solid #000;
 }
+
 
