@@ -4,6 +4,9 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse_lazy, reverse
+from django.core.mail import send_mail
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 # Create your views here.
 def home(request):
@@ -41,4 +44,49 @@ def quemsomos(request):
     return render(request, 'core/quemsomos.html',{'participantes':participantes})
 
 def contato(request):
-    return render(request, 'core/contato.html', {})
+
+    if request.method=='POST':
+        nome = request.POST.get('name-input')
+        email = request.POST.get('email-input')
+        mensagem = request.POST.get('message-input')
+
+        if (is_null(nome)):
+            return render(request, 'core/contato.html', {'cod':0})
+        elif (is_null(email)):
+            return render(request, 'core/contato.html', {'cod':0})                            
+        elif (is_null(mensagem)):
+            return render(request, 'core/contato.html', {'cod':0})
+        else:
+            my_send_email(nome, email, mensagem)
+            return render(request, 'core/contato.html', {'cod':1})    
+
+    return render(request, 'core/contato.html', {'cod':-1})
+
+def error404(request):
+    return render(request, 'core/404.html', {})
+
+
+
+#NOT VIEWS
+def my_send_email(nome, email, mensagem):
+    import smtplib
+    # Credenciais
+    remetente = 'site.centro.bdm.no.reply@gmail.com'
+    senha = 'gn2ps2k1997'
+    # Informações da mensagem
+    destinatario = 'kairoemannoel@hotmail.com'
+    assunto = 'Site Centro Bezerra de Menezes'
+    texto = 'Nome do visitante: %s' % nome+"\n"+"Email do visitante: %s" % email+"\nMensagem: "+mensagem
+    # Preparando a mensagem
+    msg = '\r\n'.join(['From: %s' % remetente,'To: %s' % destinatario,'Subject: %s' % assunto,'','%s' % texto])
+    # Enviando o email
+    server = smtplib.SMTP('smtp.gmail.com:587')
+    server.starttls()
+    server.login(remetente,senha)
+    server.sendmail(remetente, destinatario, msg)
+    server.quit()
+
+def is_null(field):
+    if(len(field)==0):
+        return True
+    return False

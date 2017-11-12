@@ -3,12 +3,13 @@ from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 
 class Participante(models.Model):
-	cod_participante = models.AutoField(primary_key=True)
-	nome_completo = models.CharField(max_length=60, default="Nome da Pessoa")
-	email = models.CharField(max_length=60, default="pessoa@email.com")
-	nome = models.CharField(max_length=20, default="Nome sobrenome")
-	sobrenome = models.CharField(max_length=20, default="Nome sobrenome")
-	descricao = models.CharField(max_length=150, default="descricao do que a pessoa faz na casa")
+    cod_participante = models.AutoField(primary_key=True)
+    nome_completo = models.CharField(max_length=60, default="Nome da Pessoa")
+    email = models.CharField(max_length=60, default="pessoa@email.com")
+    nome = models.CharField(max_length=20, default="Nome sobrenome")
+    sobrenome = models.CharField(max_length=20, default="Nome sobrenome")
+    descricao = models.CharField(max_length=150, default="descricao do que a pessoa faz na casa")
+    perfil = models.FileField(null=True, blank=True)
 
 class Evento(models.Model):
     pass

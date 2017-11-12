@@ -83,7 +83,25 @@
 
     <!-- Conteudo -->
 
+    {% ifequal cod 0 %}
+    
+    <div class="container" style="border: 2px solid #F00;" id="espaco">
+        <h5 id="msg_case_error" class="center-align">Preencha os espaços corretamente!</h5>
+    </div>
+
+    {% endifequal %}
+    {% ifequal cod 1 %}
+
+    <div class="container" style="border: 2px solid #0F0;" id="espaco">
+        <h5 class="center-align">Mensagem enviada! Agradecemos sua colaboração</h5>
+    </div>
+
+    {% else %}
+
     <div id="espaco"></div>
+
+    {% endifequal %}
+
     <div class="container row area_de_dados_para_contato">
 
         <div class="col xl6 l6 m12 s12 no-padding">
@@ -92,6 +110,7 @@
             <p class="dado_contato">Teresina - PI, 64004-285</p>
             <p class="dado_contato">Telefone: (86) 0000-0000</p>
             <p class="dado_contato">Email: emaildacasa@email.com</p>
+            <p>{{result}}</p>
         </div>
 
         <div class="col xl6 l6 m12 s12 no-padding">
@@ -99,18 +118,20 @@
             <p class="dado_contato">Fale Conosco</p>
 
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" method="POST">
+                    {% csrf_token %}
+
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="first_name" type="text" class="validate">
+                            <input name="name-input" id="first_name" type="text" class="validate">
                             <label for="first_name">Nome *</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
+                            <input name="email-input" id="email" type="email" class="validate">
                             <label for="email" data-error="Insira um email válido" data-success="Aceito">Email *</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea name="message-input" id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Sua mensagem *</label>
                         </div>
                         <div class="col xl12 l12 m12 s12">
@@ -167,11 +188,11 @@
                         <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="admin">Administração</a></li>
 
 
-                        <li class="textos_footer_mobile hide-on-large-only">Fale conosco</li>
-                        <li class="textos_footer hide-on-med-and-down">Fale conosco</li>
+                        <li class="textos_footer_mobile hide-on-large-only"><a class="white-text" href="contato">Fale conosco</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="contato">Fale conosco</a></li>
 
-                        <li class="textos_footer_mobile hide-on-large-only">Quem somos</li>
-                        <li class="textos_footer hide-on-med-and-down">Quem somos</li>
+                        <li class="textos_footer_mobile hide-on-large-only"><a class="white-text" href="quemsomos">Quem somos</a></li>
+                        <li class="textos_footer hide-on-med-and-down"><a class="white-text" href="quemsomos">Quem somos</a></li>
 
                         <li class="textos_footer_mobile hide-on-large-only"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>
                         <li class="textos_footer hide-on-med-and-down"><a target="_blank" class="white-text" href="http://fepiaui.org.br/site/">Federação Espírita Piauiense</a></li>

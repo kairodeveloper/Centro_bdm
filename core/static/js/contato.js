@@ -7,5 +7,4 @@ $(document).ready(function(){
       closeOnClick: true,
     });
     $('.dropdown-button').dropdown();
-
 });

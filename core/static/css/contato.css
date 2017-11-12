@@ -114,6 +114,10 @@
 }
 
 /*Conteudo*/
+#espaco{
+    margin-top: 10px;
+}
+
 .area_de_dados_para_contato{
     margin-top: 50px;
     margin-bottom: 50px;
