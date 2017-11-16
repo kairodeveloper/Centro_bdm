@@ -92,10 +92,10 @@
                 <div class="card card-small container z-depth-0 col s12 m12 l12 xl12 no-padding  ">
 
                      <div class="col s12 m12 no-padding" style="border-bottom: 1px solid #AAA;">
-                        <h3 class="header"> {{ i.titulo }} </h2>
+                        <h3 class="header"> {{ i.titulo }} </h3>
                         <div class="card horizontal">
                           <div  class="card-image" style="padding:10px;">
-                            <img src="{% static 'imagens/teste.jpg' %}">
+                            <img src="media/{{ i.imagem_principal }}" id="img_noticia">
                           </div>
                           <div class="card-stacked">
                             <div style="padding:10px;">
@@ -104,11 +104,13 @@
                             <div class="card-content">
                                 <p><i>por: {{ i.autor }} </i></p><br>
 
-                              <p> {{ i.texto | truncatechars:60 }} </p>
+                                <p> {{ i.texto | truncatechars:60 }} </p>
 
                             </div>
-                            <div class="card-action">
-                              <a href="#">LEIA MAIS</a>
+                            <div class="card-action row">
+
+                                <a href="#">LEIA MAIS</a>
+
                             </div>
                           </div>
                         </div>
@@ -122,9 +124,49 @@
 
             </div>
 
+
+            <ul id="dropdown2" class="dropdown-content">
+                <li><a href="#!">Mais lidas</a></li>
+                <li><a href="#!">Mais antigas</a></li>
+                <li><a href="#!">A-Z</a></li>
+            </ul>
+
+        <div class="col l1 xl1"></div>
+
+            <div class="col l3 xl3 row" id="div_pesquisar_noticias">
+
+                <div class="col xl10" id="search_box">
+
+                     <input placeholder="Pesquise por notícias..." id="first_name" type="text" class="validate">
+
+                </div>
+
+                <button class="col xl2 transparent" id="btn_search" style="border: none;">
+
+                    <i class="material-icons small">search</i>
+
+                </button>
+
+                <div class="col l12 xl12 no-padding">
+
+                    <div class="nav-wrapper ">
+
+                        <nav class="z-depth-0 ">
+                            <div class="nav-wrapper white row">
+                                <ul class="right hide-on-med-and-down col l12 xl12">
+                                    <li class="left-align"><a class="dropdown-button blue-text" href="#!" data-activates="dropdown2">Ordenar por:<i class="material-icons right">arrow_drop_down</i></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
 
-        <div class="col l3 xl3"></div>
 
     </div>
 

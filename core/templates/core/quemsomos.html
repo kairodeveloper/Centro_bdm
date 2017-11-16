@@ -84,12 +84,12 @@
     <!-- Conteudo -->
 
     <div class="container row conteudo">
-        
+
         {% for i in participantes %}
 
         <div class="card col xl3 l6 z-depth-0 hide-on-med-and-down">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{% static 'imagens/office.jpg' %}">
+                <img class="activator" src="/media/{{ i.imagem }}">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" id="nome"> {{ i.nome }} {{ i.sobrenome }}</span>
@@ -101,7 +101,7 @@
                 <p id="descricao"> {{ i.descricao }} </p>
             </div>
         </div>
-            
+
         {% endfor %}
 
         {% for i in participantes %}
@@ -120,10 +120,10 @@
                 <p id="descricao"> {{ i.descricao }} </p>
             </div>
         </div>
-            
+
         {% endfor %}
-        
-        
+
+
 
     </div>
 

@@ -90,9 +90,23 @@
 
 
 /*area das atividades*/
-.atividades{
-    margin-top:50px;
+.area_das_atividades{
+    height: 290px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
 }
+
+.area_da_esquerda{
+    height: 280px;
+    background-color: #0277bd;
+}
+
+.card-de-atividades{
+    margin-bottom: 50px;
+}
+
+.atividades{}
 /*footer*/
 #area_footer{
     height: 219px;

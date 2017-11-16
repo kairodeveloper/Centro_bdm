@@ -9,7 +9,7 @@ class Participante(models.Model):
     nome = models.CharField(max_length=20, default="Nome sobrenome")
     sobrenome = models.CharField(max_length=20, default="Nome sobrenome")
     descricao = models.CharField(max_length=150, default="descricao do que a pessoa faz na casa")
-    perfil = models.FileField(null=True, blank=True)
+    imagem = models.FileField(upload_to="participantes/%Y/%m/%d")
 
 class Evento(models.Model):
     pass
@@ -24,5 +24,6 @@ class Noticia(models.Model):
     data = models.DateField(null=True)
     hora = models.TimeField(null=True)
     acessos = models.IntegerField(default=0)
+    imagem_principal = models.FileField(blank=False, default="logo_centro.png",upload_to="noticias/%Y/%m/%d")
 
 

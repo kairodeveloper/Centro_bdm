@@ -135,17 +135,18 @@
 
         <div class="container">
             <div class="row hide-on-large-only ">
-                
+
                 {% for i in recentes %}
-                
+
                 <div class="col s12 m12">
                     <div class="card-mobile card large hoverable">
                         <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <a href=""><img src="/media/{{ i.imagem_principal }}"></a>
                             <span class="card-title titulo_noticia"> {{ i.titulo }} </span>
                         </div>
                         <div class="card-content">
                             <p> {{ i.texto | truncatechars:60 }} </p>
+
                         </div>
                         <div class="card-action">
                             <a href="#">Leia Mais</a>
@@ -157,15 +158,15 @@
 
             </div>
 
-            
+
             <div class="row hide-on-med-and-down " style="display: inline-block;">
-                
+
                 {% for i in recentes %}
 
                 <div class="col xl4 l4">
                     <div class="card medium hoverable">
                         <div class="card-image">
-                            <a href=""><img src="http://materializecss.com/images/sample-1.jpg"></a>
+                            <a href=""><img src="/media/{{ i.imagem_principal }}"></a>
                             <span class="card-title titulo_noticia"> {{ i.titulo|truncatechars:30 }} </span>
                         </div>
                         <div class="card-content">
@@ -181,7 +182,7 @@
 
             </div>
 
-        
+
 
         </div>
 
@@ -201,9 +202,9 @@
 
     </div>
     <div class="row">
-        <div class="container no-padding">
+        <div class="container">
 
-            <div class="row no-padding hide-on-med-and-down">
+            <div class="row hide-on-med-and-down">
 
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
