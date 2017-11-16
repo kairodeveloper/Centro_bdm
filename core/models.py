@@ -26,4 +26,11 @@ class Noticia(models.Model):
     acessos = models.IntegerField(default=0)
     imagem_principal = models.FileField(blank=False, default="logo_centro.png",upload_to="noticias/%Y/%m/%d")
 
-
+class EventoMes(models.Model):
+    cod_evento_mes = models.AutoField(primary_key=True)
+    titulo = models.CharField(max_length=100, unique=True, default="Titulo do evento")
+    data = models.DateField()
+    descricao = models.CharField(max_length=700, default="Descricao do evento")
+    horario = models.TimeField(null=False)
+    local = models.CharField(max_length=100, default="Local do evento")
+    organizador = models.CharField(max_length=60, default="Organizador do evento")

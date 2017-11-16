@@ -205,68 +205,42 @@
         <div class="container">
 
             <div class="row hide-on-med-and-down">
+                {{ date }}
 
                 <ul class="collapsible" data-collapsible="accordion">
-                    <li>
-                        <div class=" collapsible-header hoverable">
-                            <i class="material-icons">event</i>
-                            I PALESTRA SOBRE ESPIRITUALIDADE
-                            <span class="badge">8 de Outubro</span>
-                        </div>
-                        <div class="collapsible-body">
+                    {% for i in eventos %}
 
-                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <li>
+                            <div class=" collapsible-header hoverable">
+                                <i class="material-icons">event</i>
+                                {{ i.titulo.capitalize }}
+                                <span class="badge"> {{ i.data }} </span>
+                            </div>
+                            <div class="collapsible-body">
 
-                            <br>
+                                <p><b>DESCRIÇÃO:</b> <br> {{ i.descricao }} </p>
 
-                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
+                                <br>
 
-                            <br>
+                                <p><b>DATA:</b> {{ i.data }} </p>
 
-                            <p><b>HORÁRIO:</b> 19:00</p>
+                                <br>
 
-                            <br>
+                                <p><b>HORÁRIO:</b> {{ i.horario }} </p>
 
-                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
+                                <br>
 
-                            <br>
+                                <p><b>LOCAL:</b> {{ i.local }} </p>
 
-                            <p><b>ORGANIZADOR:</b> Juliana</p>
+                                <br>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header  hoverable">
-                            <i class="material-icons">event</i>
-                            ENCONTRO DE JOVENS ESPÍRITAS
-                            <span class="badge">8 de Outubro</span>
-                        </div>
-                        <div class="collapsible-body">
+                                <p><b>ORGANIZADOR:</b> {{ i.organizador }} </p>
 
-                            <p><b>DESCRIÇÃO:</b> <br> I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                        </li>
 
-                            <br>
+                    {% endfor %}
 
-                            <p><b>DATA:</b> 08 de Outubro(Domingo)</p>
-
-                            <br>
-
-                            <p><b>HORÁRIO:</b> 19:00</p>
-
-                            <br>
-
-                            <p><b>LOCAL:</b> Centro Espírita Bezerra de Menezes<br>Rua Rui barbosa, 2715 - Matadouro</p>
-
-                            <br>
-
-                            <p><b>ORGANIZADOR:</b> Juliana</p>
-
-                        </div>
-                    </li>
                 </ul>
             </div>
 

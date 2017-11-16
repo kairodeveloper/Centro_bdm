@@ -2,9 +2,8 @@ from django.shortcuts import render, render_to_response, redirect
 from .models import *
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from .forms import *
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse_lazy, reverse
+from django.core.urlresolvers import reverse_lazy
+from datetime import datetime
 
 # Create your views here.
 def home(request):
@@ -12,7 +11,18 @@ def home(request):
     noticias = noticias[::-1]
     recentes = noticias[0:3]
 
-    return render(request, 'core/home.html', {'recentes':recentes})
+    eventos = EventoMes.objects.all()
+    eventosDoMes = []
+
+    dateNow = datetime.now()
+
+    dateMonth = dateNow.month
+
+    for i in eventos:
+        if i.data.month==dateMonth:
+            eventosDoMes.append(i)
+
+    return render(request, 'core/home.html', {'recentes':recentes, 'eventos':eventosDoMes })
 
 
 def atividades(request):
