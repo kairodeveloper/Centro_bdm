@@ -96,7 +96,6 @@ def my_send_email(nome, email, mensagem):
     import smtplib
 
     remetente = 'site.centro.bdm.no.reply@gmail.com'
-    senha = 'gn2ps2k1997'
 
     destinatario = 'kairoemannoel@hotmail.com'
     assunto = 'Site Centro Bezerra de Menezes'
